@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Character object
+// Character prompts
 var enterNumberChar;
 var lowercase;
 var uppercase;
@@ -19,20 +19,35 @@ char = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\
 
 for (var i = 0; i < enterNumberChar; i++) {
   var characters = Math.floor(Math.random() * 128) + 1;
+  console.log()
 }
 
 
 
 
 // Write password to the #password input
-function writePassword(characters) {
-  enterNumberChar = parseInt(prompt("How many character would you like your password to have? Chose between 8 to 128"));
+function writePassword() {
+  enterNumberChar = parseInt(prompt("How many characters would you like your password to have? Chose between 8 to 128"));
+
+  lowercase = confirm("Would you like lowercase letters?")
+
+  uppercase = confirm("Would you like uppercase letters?")
+
+  number = confirm("Would you like numbers?")
+
+  specialChar = confirm("Would you like special character?")
+  
+
+  
+
   var password = generatePassword();
-  var passwordText = document.getElementById("#password").placeholder = password;
+  var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
