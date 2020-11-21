@@ -13,6 +13,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// Generate password with the following prompt and confirms.
 function generatePassword() {
   var options = [];
   var generatedPassword = "";
@@ -24,36 +25,40 @@ if (length < 8) {
   alert("Your password must be less than 128 characters.")
 } 
 
-// If the user wants lower case letters.
+// If the user wants lowercase letters.
 var lowercase = confirm("Would you like lowercase letters?")
 if (lowercase === true) {
   options = options.concat(alphaLower);
   console.log("includes letters.");
 }
-  
+
+// If the user wants uppercase letters.
 var uppercase = confirm("Would you like uppercase letters?")
 if (uppercase === true) {
   options = options.concat(alphaUpper);
   console.log("includes uppercase letters.");
 }
 
+// If the user wants numbers.
 var number = confirm("Would you like numbers?")
 if (number === true) {
   options = options.concat(num);
   console.log("includes numbers.");
 }
 
+// If the user wants special characters.
 var specialChar = confirm("Would you like special character?")
 if (specialChar === true) {
   options = options.concat(char)
   console.log("includes special characters.");
 }
-    
-  for (var i = 0; i < length; i++) {
-    var random = Math.floor(Math.random() * options.length)
-    generatedPassword = generatedPassword + (options[random]);
+
+// Generating random password from the selected characters and desired length of characters.
+for (var i = 0; i < length; i++) {
+  var random = Math.floor(Math.random() * options.length)
+  generatedPassword = generatedPassword + (options[random]);
   }
-  return generatedPassword;
+return generatedPassword;
 }
   
 // Add event listener to generate button
