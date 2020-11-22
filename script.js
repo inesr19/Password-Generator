@@ -19,17 +19,15 @@ function generatePassword() {
   var generatedPassword = "";
   var length = parseInt(prompt("How many characters would you like your password to have? Chose between 8 to 128"));
 
-if (length < 8) {
-  alert("Your password must be more than 8 characters.");
-} else if (length > 128) {
-  alert("Your password must be less than 128 characters.")
-} 
+  if (length < 8 || length > 128) {
+  return alert("Your password length must be between 8 to 128 characters. Please input a new value.");
+  }
 
 // If the user wants lowercase letters.
 var lowercase = confirm("Would you like lowercase letters?")
 if (lowercase === true) {
   options = options.concat(alphaLower);
-  console.log("includes letters.");
+  console.log("includes lowercase letters.");
 }
 
 // If the user wants uppercase letters.
