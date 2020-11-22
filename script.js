@@ -20,35 +20,35 @@ function generatePassword() {
   var length = parseInt(prompt("How many characters would you like your password to have? Chose between 8 to 128"));
 
   if (length < 8 || length > 128) {
-  return alert("Your password length must be between 8 to 128 characters. Please input a new value.");
+    return alert("Your password length must be between 8 to 128 characters. Please input a new value.");
   }
 
 // If the user wants lowercase letters.
   var lowercase = confirm("Would you like lowercase letters?")
   if (lowercase === true) {
-  options = options.concat(alphaLower);
-  console.log("includes lowercase letters.");
+    options = options.concat(alphaLower);
+    console.log("includes lowercase letters.");
 }
 
 // If the user wants uppercase letters.
   var uppercase = confirm("Would you like uppercase letters?")
   if (uppercase === true) {
-  options = options.concat(alphaUpper);
-  console.log("includes uppercase letters.");
+    options = options.concat(alphaUpper);
+    console.log("includes uppercase letters.");
 }
 
 // If the user wants numbers.
   var number = confirm("Would you like numbers?")
   if (number === true) {
-  options = options.concat(num);
-  console.log("includes numbers.");
+    options = options.concat(num);
+    console.log("includes numbers.");
 }
 
 // If the user wants special characters.
   var specialChar = confirm("Would you like special character?")
   if (specialChar === true) {
-  options = options.concat(char)
-  console.log("includes special characters.");
+    options = options.concat(char)
+    console.log("includes special characters.");
 }
 
 // Generating random password from the selected characters and desired length of characters.
