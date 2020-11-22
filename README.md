@@ -7,3 +7,13 @@ The function of this page is to generate a random password using different types
 
 ![webpage screenshot](https://github.com/inesr19/Password-Generator/blob/main/assets/images/password-generator.png)
 
+### Changes Made - Javascript Source Code
+
+1. Added variables for upper and lowercase letters, numbers, and symbols.
+2. Added another function with a generatePassword method.
+3. Added empty variables for the arrays and random generated password.
+4. Added the initial prompt following a "if" statement within the generatePassword() function.
+5. Added confirms for all possible character options along with a corresponding "if" statement for each the confirms. (all within the generatePassword() function).
+6. Added concat methods to each of the confirm "if" statements so that the different characters within each array could combine together.
+7. Added a for loop and return within the generatePassword() function to generate random characters for the password.
+
