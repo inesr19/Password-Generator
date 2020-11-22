@@ -5,4 +5,5 @@ The function of this page is to generate a random password using different types
 
 ### Screenshots
 
-![webpage screenshot]()
+![webpage screenshot](https://github.com/inesr19/Password-Generator/blob/main/assets/images/password-generator.png)
+
